@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Your Demo - Yakei Records</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 20px;
+    }
 
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    input[type="email"],
+    input[type="file"],
+    button {
+      padding: 15px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input[type="email"] {
+      background: white;
+      color: black;
+    }
+
+    input[type="file"] {
+      background: #111;
+      color: white;
+    }
+
+    button {
+      background: white;
+      color: black;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #ccc;
+    }
+
+    a {
+      margin-top: 30px;
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Submit Your Demo</h1>
+  <form action="https://formsubmit.co/yakeirecords@gmail.com" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="_subject" value="New Demo Submission">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="file" name="attachment" accept=".mp3" required />
+    <button type="submit">Send Demo</button>
+  </form>
+  <a href="index.html">← Back to Home</a>
+</body>
+</html>
