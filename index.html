@@ -40,16 +40,16 @@
         #111 2px,
         #111 4px
       );
-      mix-blend-mode: screen;
+      /* Removed mix-blend-mode to avoid text disappearing */
       animation: glitch-bg-red 1.5s infinite linear alternate;
-      opacity: 0.15;
+      opacity: 0.25; /* Increased opacity */
       pointer-events: none;
     }
 
     .glitch-bg::after {
       animation-name: glitch-bg-cyan;
       animation-delay: 0.7s;
-      opacity: 0.12;
+      opacity: 0.2;
     }
 
     @keyframes glitch-bg-red {
@@ -125,7 +125,10 @@
       left: 0;
       width: 100%;
       overflow: hidden;
-      background: black;
+      /* Removed background to keep text visible */
+      background: transparent;
+      user-select: none;
+      pointer-events: none;
     }
 
     .title::before {
